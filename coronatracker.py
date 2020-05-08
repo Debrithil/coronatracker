@@ -18,7 +18,7 @@ def start(update, context):
 
 def info(update, context):
     # sends an automatic message when the user enters / info in the text field
-    update.message.reply_text('Select the country or territory you want to view:' + '\n' + '/nordic' + '\n' + '/northamerican' +
+    update.message.reply_text('Select the area you want to view:' + '\n' + '/nordiccountries' + '\n' + '/northamerican' +
     '\n' + '/southamerican' + '\n' + '/globally')
 
 def helpline(update, context):
@@ -40,13 +40,13 @@ def globally(update, context):
     # sends the wanted data to the Telegram bot as a message
     context.bot.sendMessage(chat_id=update.effective_chat.id, text=text)
 
-def nordic(update, context):
+def nordiccountries(update, context):
     # creating a GET request from COVID-19 API
     response = requests.get('https://api.covid19api.com/summary').json()
     # fetch the wanted data from the REST API (Country list)
     data = response['Countries']
     text = ''
-    # lists the wanted countries from the list
+    # fetch the wanted countries from the API list
     wanted = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Island']
     # for-loop fetches the countries on the list and parses the wanted data.
     # if the country is found in the wanted list, the bot prints its current information
@@ -69,7 +69,7 @@ def northamerican(update, context):
     # fetch the wanted data from the REST API (country list)
     data = response['Countries']
     text = ''
-    # lists the wanted countries from the list
+    # fetch the wanted countries from the API list
     wanted = ['Canada', 'United States', 'Mexico', 'Nicaragua', 'Honduras', 'Cuba', 'Guatemala', 'Panama', 'Costa Rica', 'Dominican Republic', 
     'Haiti', 'Belize', 'El Salvador', 'The Bahamas', 'Jamaica', 'Trinidad and Tobago', 'Dominica', 'Saint Lucia', 'Antigua and Barbuda', 'Barbados',
      'Saint Vincent and the Grenadines', 'Grenada', 'Saint Kitts and Nevis']
@@ -94,7 +94,7 @@ def southamerican(update, context):
     # fetch the wanted data from the REST API (country list)
     data = response['Countries']
     text = ''
-    # lists the wanted countries from the list
+    # fetch the wanted countries from the API list
     wanted = ['Brazil', 'Argentina', 'Peru', 'Colombia', 'Bolivia', 'Venezuela', 'Chile', 'Paraguay', 'Ecuador', 'Guyana', 'Uruguay', 'Suriname']
     # for-loop fetches the countries on the list and parses the wanted data.
     # if the country is found in the wanted list, the bot prints its current information
@@ -120,7 +120,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("info", info))
     dp.add_handler(CommandHandler("helpline", helpline))
-    dp.add_handler(CommandHandler("nordic", nordic))
+    dp.add_handler(CommandHandler("nordiccountries", nordiccountries))
     dp.add_handler(CommandHandler("globally", globally))
     dp.add_handler(CommandHandler("northamerican", northamerican))
     dp.add_handler(CommandHandler("southamerican", southamerican))
