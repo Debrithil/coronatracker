@@ -11,4 +11,4 @@ Telegram Bot API
 https://core.telegram.org/api
 
 ### Screenshots:
-<img src="https://i.imgur.com/4eIDBWv.jpg" width="250" title="screenshot_1"> <img src="https://i.imgur.com/P1Q0TB9.jpg" width="250" alt="screenshot_2">
+<img src="https://i.imgur.com/oTiZM47.jpg" width="250" title="screenshot_1"> <img src="https://i.imgur.com/P1Q0TB9.jpg" width="250" alt="screenshot_2">
