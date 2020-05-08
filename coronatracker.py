@@ -23,7 +23,7 @@ def info(update, context):
 
 def helpline(update, context):
     # sends an automatic message when the user enters / helpline in the text field
-    update.message.reply_text('The Government´s joint telephone helpline is open on weekdays at 8-21 and on Saturdays at 9-15.'
+    update.message.reply_text('The Government´s joint telephone helpline is open on weekdays at 8-21 and on Saturdays at 9-15. '
     'Calls to the helpline are subject to a regular local network or mobile phone charge.' + 
     '\n' 'Telephone counselling: 0295 535 535')
 
