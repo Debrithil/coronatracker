@@ -10,7 +10,7 @@ import json
 
 def start(update, context):
     # sends an automatic message when the bot starts or when the user enters / start in the text field
-    update.message.reply_text('Hi pal! You have just launched a coronavirus bot! Here you can find the latest coronavirus data based on research by'
+    update.message.reply_text('Hi pal! You have just launched a coronavirus bot! Here you can find the latest coronavirus data based on research by '
     'Johns Hopkins University.' +
     '\n' 'Please type one of the options below:' +
     '\n' '/info to select the data you want to view' +
