@@ -1,5 +1,5 @@
 # Telegram Bot API
-This is a Telegram coronatracker bot where the user is able to view real-time information about the COVID-19 situation by region or country. The data are based on research by Johns Hopkins University.
+This is a Telegram coronatracker bot where the user is able to view real-time information about the COVID-19 situation by region (for example the Nordic countries). The data are based on research by Johns Hopkins University.
 
 This project was created for a software development technologies course as an assignment
 
